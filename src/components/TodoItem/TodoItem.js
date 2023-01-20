@@ -12,10 +12,10 @@ const TodoItem = ({text, myKey, isDone}) => {
             <div className='done-block' onClick={() => dispatch(doneTodo(myKey))}>
                 {isDone ? <DoneIcon done={true}/> : <DoneIcon done={false}/>}
             </div>
-            <div>
+            <div className='task-text'>
                 <p className={isDone ? 'done task' : 'task'}>{text}</p>
             </div>
-            <div onClick={() => dispatch(removeTodo(myKey))}>
+            <div className='remove-todo' onClick={() => dispatch(removeTodo(myKey))}>
                 <XCircle/>
             </div>
         </div>

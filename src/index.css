@@ -12,8 +12,9 @@ body{
 
 .wrapper{
     margin: 50px auto;
-    padding: 40px;
-    max-width: 750px;
+    /*padding: 40px;*/
+    min-width: 330px;
+    max-width: 1000px;
     background-color: rgba(255,255,255, 0.2);
     display: flex;
     flex-direction: column;
@@ -27,8 +28,10 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 330px;
     width: 70%;
     padding: 20px 0;
+    margin: 20px 0;
     background-color: rgba(255,255,255, 0.2);
 }
 
@@ -40,6 +43,7 @@ form{
 }
 
 .input-field{
+    max-width: 215px;
     font-size: 16px;
     color: gray;
     font-weight: bolder;
@@ -60,8 +64,10 @@ form{
 
 
 .task-block{
+    /*width: 70%;*/
+    min-width: 330px;
     width: 70%;
-    margin: 20px 0;
+    margin-bottom: 20px;
     background-color: rgba(255,255,255, 0.2);
     display: flex;
     justify-content: space-between;
@@ -73,6 +79,19 @@ form{
     justify-content: center;
     align-items: center;
     color: white;
+    margin: 10px;
+
+}
+
+.task-text{
+    /*transition: all ease 0.3s;*/
+    overflow-x: auto;
+    visibility: hidden;
+}
+
+.task-text:hover{
+    transition: all ease 0.3s;
+    visibility: visible;
 }
 
 .done{
@@ -80,9 +99,14 @@ form{
 }
 
 .task{
+    visibility: visible;
     font-size: 20px;
     color: white;
     font-weight: bold;
+}
+
+.remove-todo{
+    margin: 0 10px;
 }
 
 svg{
@@ -145,4 +169,29 @@ svg{
     padding: 5px;
     margin: 10px;
     cursor: pointer;
+}
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    height: 5px;
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #c5c5c5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(54, 54, 54, 0.51);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #444444;
 }
